@@ -29,7 +29,7 @@ internal class SlowestKeyPressKtTest {
         System.setIn(input)
         val scanner = Scanner(System.`in`)
 
-        assertEquals(message = "success", expected = 'e', actual = findSlowestKeyPress(scanner, 5))
+        assertEquals(message = "failure - The returned character is not equal to e", expected = 'e', actual = findSlowestKeyPress(scanner, 5))
     }
 
     @Test
@@ -39,7 +39,7 @@ internal class SlowestKeyPressKtTest {
         System.setIn(input)
         val scanner = Scanner(System.`in`)
 
-        assertEquals(message = "success", expected = 'a', actual = findSlowestKeyPress(scanner, 3))
+        assertEquals(message = "failure - The returned character is not equal to a", expected = 'a', actual = findSlowestKeyPress(scanner, 3))
     }
 
     @Test
@@ -49,7 +49,7 @@ internal class SlowestKeyPressKtTest {
         System.setIn(input)
         val scanner = Scanner(System.`in`)
 
-        assertEquals(message = "success", expected = 'b', actual = findSlowestKeyPress(scanner, 1))
+        assertEquals(message = "failure - The returned character is not equal to b", expected = 'b', actual = findSlowestKeyPress(scanner, 1))
     }
 
     @Test
@@ -59,6 +59,6 @@ internal class SlowestKeyPressKtTest {
         System.setIn(input)
         val scanner = Scanner(System.`in`)
 
-        assertEquals(message = "success", expected = 'd', actual = findSlowestKeyPress(scanner, 2))
+        assertEquals(message = "failure - The returned character is not equal to d", expected = 'd', actual = findSlowestKeyPress(scanner, 2))
     }
 }
