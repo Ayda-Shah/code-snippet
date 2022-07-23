@@ -11,7 +11,7 @@ internal class DistanceBetweenTwoPointsTest {
         val x2 = 4
         val y2 = 5
         val point2D = Point2D(x1, y1)
-        val distance = point2D(Point2D(x2, y2))
+        val distance = point2D.dist2D(Point2D(x2, y2))
 
         DefaultAsserter.assertEquals(
             message = "failure - The returned value is not equal to 5",
@@ -27,7 +27,7 @@ internal class DistanceBetweenTwoPointsTest {
         val x2 = -4
         val y2 = -5
         val point2D = Point2D(x1, y1)
-        val distance = point2D(Point2D(x2, y2))
+        val distance = point2D.dist2D(Point2D(x2, y2))
 
         DefaultAsserter.assertEquals(
             message = "failure - The returned value is not equal to 5",
@@ -43,7 +43,7 @@ internal class DistanceBetweenTwoPointsTest {
         val x2 = 4
         val y2 = -5
         val point2D = Point2D(x1, y1)
-        val distance = point2D(Point2D(x2, y2))
+        val distance = point2D.dist2D(Point2D(x2, y2))
 
         DefaultAsserter.assertEquals(
             message = "failure - The returned value is not equal to 9",
@@ -59,7 +59,7 @@ internal class DistanceBetweenTwoPointsTest {
         val x2 = 0
         val y2 = 0
         val point2D = Point2D(x1, y1)
-        val distance = point2D(Point2D(x2, y2))
+        val distance = point2D.dist2D(Point2D(x2, y2))
 
         DefaultAsserter.assertEquals(
             message = "failure - The returned value is not equal to 0",
