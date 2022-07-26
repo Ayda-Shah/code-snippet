@@ -1,3 +1,8 @@
+import java.lang.Math.pow
+import kotlin.math.ceil
+import kotlin.math.pow
+import kotlin.math.sqrt
+
 /*
 This challenge involves points in two and three dimensional space. The classes and methods to implement will store values for coordinates as well as calculate
 * distances between points. The 2D and 3D distances between two points are calculated using the following formulae:
@@ -61,19 +66,34 @@ class DistanceBetweenTwoPoints {
 }
 
 open class Point2D {
-    private var x = 0
-    private var y = 0
+    protected var x = 0
+    protected var y = 0
 
     constructor(x: Int, y: Int) {
         this.x = x
         this.y = y
     }
 
-    fun dist2D(point:Point2D):Int{
-        //TODO calculate distance
-        return 0
+    fun dist2D(point: Point2D): Int {
+        val dist = sqrt((point.x - this.x).toDouble().pow(2.0) + (point.y - this.y).toDouble().pow(2.0))
+        return ceil(dist).toInt()
+    }
+}
+
+class Point3D(x: Int, y: Int, z: Int) : Point2D(x, y) {
+    private var z = 0
+
+    init {
+        this.z = z
     }
 
+    fun dist3D(point: Point3D): Int {
+        val dist = sqrt(
+            (point.x - this.x).toDouble().pow(2.0) + (point.y - this.y).toDouble()
+                .pow(2.0) + (point.z - this.z).toDouble().pow(2.0)
+        )
+        return ceil(dist).toInt()
+    }
 
 }
 
