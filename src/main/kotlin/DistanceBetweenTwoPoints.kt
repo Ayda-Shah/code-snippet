@@ -3,7 +3,7 @@ import kotlin.math.ceil
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-/*
+/**
 This challenge involves points in two and three dimensional space. The classes and methods to implement will store values for coordinates as well as calculate
 * distances between points. The 2D and 3D distances between two points are calculated using the following formulae:
 *

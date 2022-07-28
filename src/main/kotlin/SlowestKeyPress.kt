@@ -1,4 +1,4 @@
-/*
+/**
 * Slowest Key Press
 *   Engineers have redesigned a keypad used by ambulance drivers in urban areas. In order to determine which key
 *   takes the longest time to press, the keypad is tested by a driver. Given the results of that test, determine which key
